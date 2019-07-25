@@ -172,7 +172,7 @@ if ($AUTHENTICATED && !empty($MYREQUEST['DU'])) {
 	apc_delete($MYREQUEST['DU']);
 }
 
-if(!function_exists('apc_cache_info') || !($cache=@apc_cache_info($cache_mode))) {
+if(!function_exists('apc_cache_info')) {
 	echo "No cache info available.  APC does not appear to be running.";
   exit;
 }
@@ -1495,7 +1495,7 @@ for($i=20; $i>=0; $i--){
                 if(count($cache_user['cache_list'])==0){
                     ?>
                     <div class="alert alert-warning fade in">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">ï¿½</button>
                         Sorry, no user varibles found in opcode cache
                     </div>
                     <?php
